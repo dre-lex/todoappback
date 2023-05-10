@@ -7,11 +7,7 @@
     "node": "14.21.2"
   },
   "scripts": {
-    "start": "nodemon server.js",
-    "deploy": "node server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Deondre A <dre.lex85@gmail.com> (https://www.npmjs.com/~drelex)",
   "license": "ISC",
