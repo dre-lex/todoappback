@@ -1,8 +1,9 @@
+const PORT = process.env.PORT || 8000
 const express = require('express')
 const cors = require('cors')
 const {v4: uuidv4} = require('uuid')
 const app = express()
-const pool = require('./db.js')
+const pool = require('./db')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
@@ -12,8 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/todos/:userEmail', async (req, res) => {        
-    const {userEmail} = req.params
-    
+    const {userEmail} = req.params    
 
     try {
         const todos = await pool.query('SELECT * FROM todos Where user_email = $1', [userEmail])
@@ -115,6 +115,6 @@ app.post('/login', async (req, res) => {
     }
 })
 
-app.listen(process.env.PORT || 8000, () => {
+app.listen(PORT, () => {
     console.log('Server running');
 });
