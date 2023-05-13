@@ -1,6 +1,6 @@
-CREATE DATABASE ToDoApp;
+CREATE DATABASE todoapp;
 
-CREATE TABLE Todos (
+CREATE TABLE todos (
     id VARCHAR(255) PRIMARY KEY,
     user_email VARCHAR(255),
     title VARCHAR(30),
