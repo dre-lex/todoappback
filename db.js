@@ -39,4 +39,5 @@ pool.on('connect', (err, client) => {
     console.log('PG Pool connected')
 })
 
+
 module.exports = pool
